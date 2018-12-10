@@ -4,7 +4,7 @@
   "description": "Base project for a simple API in NodeJS",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "NODE_ENV=test mocha --exit"
   },
   "author": "Rafael Augusto Brandão (brandaorafael)",
   "license": "MIT",
@@ -15,6 +15,7 @@
     "express": "^4.13.3",
     "method-override": "^2.3.5",
     "mocha": "^5.2.0",
+    "mongoose": "^5.3.15",
     "morgan": "^1.6.1"
   }
 }

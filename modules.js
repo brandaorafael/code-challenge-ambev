@@ -12,6 +12,10 @@ module.exports = function(){
 	modules.bodyParser     	= require('body-parser');
 	//https://github.com/expressjs/method-override
 	modules.methodOverride 	= require('method-override');
+	//https://github.com/expressjs/method-override
+	modules.methodOverride 	= require('method-override');
+	//https://mongoosejs.com/
+	modules.mongoose 		= require('mongoose');
 
 	return modules;
 }
