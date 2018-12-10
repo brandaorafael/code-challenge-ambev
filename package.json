@@ -1,0 +1,20 @@
+{
+  "name": "BaseProject",
+  "version": "1.1.0",
+  "description": "Base project for a simple API in NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Rafael Augusto Brandão (brandaorafael)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "express": "^4.13.3",
+    "method-override": "^2.3.5",
+    "mocha": "^5.2.0",
+    "morgan": "^1.6.1"
+  }
+}
