@@ -217,6 +217,15 @@ module.exports = function(server, chai, schemas){
 				});
 			});
 
+			it('it should try GET the nearest pdv but it isn\'t inside any coverage area', function(done) {
+				chai.request(server)
+				.get('/v1/pdv/nearest?lat=-38.548622131347656&long=-3.8714479717310915')
+				.end(function(err, res){
+					res.should.have.status(404);
+					done();
+				});
+			});
+
 			it('it should GET the nearest pdv', function(done) {
 				chai.request(server)
 				.get('/v1/pdv/nearest?lat=-38.53922367095947&long=-3.795957528284279')
