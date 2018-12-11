@@ -12,10 +12,16 @@ module.exports = function(mongoose) {
 		},
 		tradingName: String,
 		ownerName: String,
-		document: String,
+		document: {
+			type: String,
+			unique: true,
+			index: true
+		},
 		coverageArea: multipolygon,
 		address: point
 	});
+
+	pdvSchema.index( { 'address' : "2dsphere" } );
 
 	return mongoose.model('Pdv', pdvSchema);
 }

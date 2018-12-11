@@ -4,6 +4,7 @@ module.exports = function(modules, schemas){
 	var pdv = {};
 	pdv.controllers = {};
 	pdv.controllers.crud = require(__dirname + '/modules/pdv/crud-controller.js')(schemas.pdv);
+	pdv.controllers.geojson = require(__dirname + '/modules/pdv/geojson-controller.js')(schemas.pdv);
 
 	//Rotas
 	var routes = {};
