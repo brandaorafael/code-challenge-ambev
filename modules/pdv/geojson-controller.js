@@ -12,7 +12,7 @@ module.exports = function(Pdv){
 			var point = { type: 'Point', coordinates: [lat, long] };
 
 			Pdv.find({'address': { $near: {$geometry: point }}}).findOne({'coverageArea': { $geoIntersects: {$geometry: point} }}, function(err, pdv){
-				if (err) return res.status(501).json({error: err});
+				if (err) return res.status(501).json({error: "Internal server error"});
 				if(pdv == null) return res.status(404).json({error: "PDV not found"});
 				return res.json({pdv: pdv});
 			});
