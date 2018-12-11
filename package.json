@@ -1,13 +1,12 @@
 {
-  "name": "BaseProject",
-  "version": "1.1.0",
-  "description": "Base project for a simple API in NodeJS",
+  "name": "Code Challenge Ambev",
+  "version": "1.0.0",
+  "description": "Backend solution for https://github.com/ZXVentures/code-challenge/blob/master/backend.md",
   "main": "app.js",
   "scripts": {
     "test": "NODE_ENV=test mocha --exit"
   },
   "author": "Rafael Augusto Brandão (brandaorafael)",
-  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.13.3",
     "chai": "^4.2.0",
