@@ -20,18 +20,19 @@ module.exports = function(server, chai, schemas){
 		}
 	}
 
-	describe('Init', function () {
+	describe('CRUD pdv', function () {
 		this.timeout(15000);
 
-		after(function (done) {
-			PDV.collection.drop(function(){
+		before(function (done) {
+			PDV.deleteMany({}, function(){
 				done();
 			});
 		});
 
-		describe('CRUD pdv', function() {
+		var post;
 
-			var post;
+		describe('POST pdv', function() {
+
 
 			it('it should POST a pdv', function(done) {
 				chai.request(server)
@@ -45,7 +46,7 @@ module.exports = function(server, chai, schemas){
 				});
 			});
 
-			it('it should try POST a pdv and return an error', function(done) {
+			it('it should try POST a pdv with used id and return an error', function(done) {
 				chai.request(server)
 				.post('/v1/pdv')
 				.send(pdv)
@@ -54,6 +55,9 @@ module.exports = function(server, chai, schemas){
 					done();
 				});
 			});
+		});
+
+		describe('GET pdv', function() {
 
 			it('it should GET the correct pdv', function(done) {
 				chai.request(server)
