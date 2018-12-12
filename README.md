@@ -3,7 +3,7 @@
 
 ## Sobre o projeto
 
-O projeto para essa solução em backend foi feito usando o framework para Javascript, [NodeJS](https://nodejs.org/) (v8.10.0), e o banco de dados não relacional, [MongoDB](https://www.mongodb.com/), tanto pela simplicidade dos dados do projeto quanto pelo uso de [GeoJson](http://geojson.org/). Para manejo do banco foi usado o modelador de objetos, [Mongoose](https://mongoosejs.com/). Ele é conectado ao banco e configurado inicialmente no arquivo mongoose-init.js, e seus Schemas foram definidos no diretório models do projeto. Para simplificar os testes no projeto, ele já está conectado a 2 bancos de dados (dev e tests) usando o serviço do [mLab](https://mlab.com/). Para implementação de testes automatizados, foram usados os frameworks de testes [Mocha](https://mochajs.org/) e [Chai](https://www.chaijs.com/). Eles são usados para testar os módulos em todos os seus possíveis cenários e comparar as respostas obtidas com as esperadas. Para não interferir no banco usado para testes em desenvolvimento, foi criado um banco de dados exclusivo para uso em testes, que é esvaziado ao final do teste de cada módulo.
+O projeto para essa solução em backend foi feito usando o framework para Javascript, [NodeJS](https://nodejs.org/) (v8.10.0), e o banco de dados não relacional, [MongoDB](https://www.mongodb.com/), tanto pela simplicidade dos dados do projeto quanto pelo uso de [GeoJson](http://geojson.org/). Para manejo do banco foi usado o modelador de objetos, [Mongoose](https://mongoosejs.com/). Ele é conectado ao banco e configurado inicialmente no arquivo mongoose-init.js, e seus Schemas foram definidos no diretório models do projeto. Para simplificar os testes no projeto, ele já está conectado a 2 bancos de dados (dev e tests) usando o serviço do [mLab](https://mlab.com/). Para implementação de testes automatizados, foram utilizados os frameworks de testes [Mocha](https://mochajs.org/) e [Chai](https://www.chaijs.com/). Eles são usados para testar os módulos em todos os seus possíveis cenários e comparar as respostas obtidas com as esperadas. Para não interferir no banco usado para testes em desenvolvimento, foi criado um banco de dados exclusivo para uso em testes, que é esvaziado ao final do teste de cada módulo.
 
 
 ## Pré requisitos
@@ -84,7 +84,7 @@ Esses 3 endpoints podem retornar os seguintes status no header do response:
 * 422: Algum argumento está faltando no request
 * 501: Erro interno no servidor
 
-Para facilitar os testes, foi criado uma Collection e um Environment para o [Postman](https://www.getpostman.com/).
+Para facilitar os testes, foram criados uma Collection e um Environment para o [Postman](https://www.getpostman.com/).
 
 
 ## Testando a API
