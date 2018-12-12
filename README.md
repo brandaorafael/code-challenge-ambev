@@ -8,7 +8,7 @@ O projeto para essa solução em backend foi feito usando o framework para Javas
 
 ## Pré requisitos
 
-Para rodar esse projeto, é necessário ter o Node.js e o seu gestor de pacotes NPM instalados em seu computador. Para mais infomrações clique [aqui](https://nodejs.org/).
+Para rodar esse projeto, é necessário ter o Node.js e o seu gestor de pacotes NPM instalados em seu computador. Para mais informações clique [aqui](https://nodejs.org/).
 
 
 ## Instalação
