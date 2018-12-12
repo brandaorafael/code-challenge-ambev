@@ -1,8 +1,9 @@
+
 # Solução de backend para https://github.com/ZXVentures/code-challenge/blob/master/backend.md
 
 ## Sobre o projeto
 
-O projeto para essa solução em backend foi feito usando o framework para Javascript, NodeJS (v8.10.0) e o banco de dados não relacional, MongoDB, tanto pela simplicidade dos dados do projeto quanto pelo uso de GeoJson. Para manejo do banco foi usado o modelador de objetos, Mongoose. Ele é conectado ao banco e configurado inicialmente no arquivo mongoose-init.js e seus Schemas foram definidos no diretório models do projeto. Para simplificar os testes no projeto, ele já está conectado à 2 bancos de dados (dev e tests) usando o serviço do mLab. Para implementação de testes automatizados, foi usado os frameworks de testes Mocha e Chai. Eles são usados para testar os módulos em todos os seus possíveis cenários e comparar as respostas obtidas com as esperadas. Para não interferir no banco usado para testes em desenvolvimento, foi criado um banco de dados exclusivo para uso em testes, que é esvaziado ao final do teste de cada módulo.
+O projeto para essa solução em backend foi feito usando o framework para Javascript, [NodeJS](https://nodejs.org/) (v8.10.0) e o banco de dados não relacional, [MongoDB](https://www.mongodb.com/), tanto pela simplicidade dos dados do projeto quanto pelo uso de [GeoJson](http://geojson.org/). Para manejo do banco foi usado o modelador de objetos, [Mongoose](https://mongoosejs.com/). Ele é conectado ao banco e configurado inicialmente no arquivo mongoose-init.js e seus Schemas foram definidos no diretório models do projeto. Para simplificar os testes no projeto, ele já está conectado à 2 bancos de dados (dev e tests) usando o serviço do [mLab](https://mlab.com/). Para implementação de testes automatizados, foi usado os frameworks de testes [Mocha](https://mochajs.org/) e [Chai](https://www.chaijs.com/). Eles são usados para testar os módulos em todos os seus possíveis cenários e comparar as respostas obtidas com as esperadas. Para não interferir no banco usado para testes em desenvolvimento, foi criado um banco de dados exclusivo para uso em testes, que é esvaziado ao final do teste de cada módulo.
 
 
 ## Pré requisitos
@@ -17,7 +18,7 @@ Clone, download ou de fork no projeto. Feito isso, entre no diretório do projet
 
 ## Deploy
 
-O deploy foi feito pela ferramenta Heroku. Eu apenas criei um app novo na plataforma e linkei ele à branch master deste projeto. Agora toda ver que algo subir na branch master, o Heroku fara deploy automaticamente. A única coisa que tive de colocar no package.json para isso foi que o script de start é pelo arquivo app.js (e não server.js que é seu default).
+O deploy foi feito pela ferramenta [Heroku](https://www.heroku.com/). Eu apenas criei um app novo na plataforma e linkei ele à branch master deste projeto. Agora toda ver que algo subir na branch master, o Heroku fara deploy automaticamente. A única coisa que tive de colocar no package.json para isso foi que o script de start é pelo arquivo app.js (e não server.js que é seu default). https://code-challenge-ambev.herokuapp.com/v1/pdv/1
 
     https://code-challenge-ambev.herokuapp.com
 
