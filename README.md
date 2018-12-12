@@ -63,9 +63,9 @@ Se o projeto for iniciado com sucesso, ele estará roteando a API para a porta 7
 
 Essa arquitetura consiste de 3 partes principais:
 
-os arquivos app.js, server.js e modules.js que fazem a configuração inicial da API;
-o diretório routes que cria os endpoints e conectam com seus respectivos modulos;
-o diretório modules, onde se encontram todo processamento dos modulos que alimentarão a API. 
+* Os arquivos app.js, server.js e modules.js que fazem a configuração inicial da API
+* O diretório routes que cria os endpoints e conectam com seus respectivos modulos
+* O diretório modules, onde se encontram todo processamento dos modulos que alimentarão a API
 
 
 ## Funcionamento da API
