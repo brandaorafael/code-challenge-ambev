@@ -84,7 +84,7 @@ Esses 3 endpoints podem retornar os seguintes status no header do response:
 * 422: Algum argumento está faltando no request
 * 501: Erro interno no servidor
 
-Para facilitar os testes, foi criado uma Collection e um Environment para o Postman.
+Para facilitar os testes, foi criado uma Collection e um Environment para o [Postman](https://www.getpostman.com/).
 
 
 ## Testando a API
