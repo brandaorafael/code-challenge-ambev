@@ -1,5 +1,6 @@
 module.exports = function(mongoose) {
 	var Schema = mongoose.Schema;
+	
 	var geojson = require(__dirname + '/geojson.js')(mongoose);
 	var multipolygon = geojson.multipolygonSchema;
 	var point = geojson.pointSchema;

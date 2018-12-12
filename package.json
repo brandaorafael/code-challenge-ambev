@@ -1,5 +1,5 @@
 {
-  "name": "Code Challenge Ambev",
+  "name": "code-challenge-ambev",
   "version": "1.0.0",
   "description": "Backend solution for https://github.com/ZXVentures/code-challenge/blob/master/backend.md",
   "main": "app.js",
