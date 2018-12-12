@@ -34,11 +34,11 @@ Se o projeto for iniciado com sucesso, ele estará roteando a API para a porta 7
     
     app.js                          --> Arquivo principal, configurações iniciais
     config.js                       --> Arquivo que reune configurações do sistema (no projeto somente para coneção com o banco)
-    modules.js                      --> Todos os modulos do projeto são chamados aqui
+    modules.js                      --> Todos os módulos do projeto são chamados aqui
     package.json                    --> Dados do projeto e todas as dependências que serão instaladas com o comando "npm install"
     PDV.postman_collection.json     --> Arquivo com a Collection para testes no Postman
     PDV.postman_environment.json    --> Arquivo com o Environment para testes no Postman
-    server.js                       --> Arquivo que une os modulos com suas respectivas rotas.
+    server.js                       --> Arquivo que une os módulos com suas respectivas rotas.
     db/
         mongoose-init.js            --> Configuração inicial do banco de dados
     models/
@@ -47,7 +47,7 @@ Se o projeto for iniciado com sucesso, ele estará roteando a API para a porta 7
             geojson.js              --> Definição de Point e MultiPolygon usados na contrução do Schema de PDV
             pdv.js                  --> Definição do schema de PDV
     modules/                        --> Diretório que contém as operações a serem executadas quando chamados os endpoints
-        pdv/                        --> Pasta com os controllers do modulo pdv
+        pdv/                        --> Pasta com os controllers do módulo pdv
             crud-controller.js      --> Controller para criação e busca de PDVs
             geojson-controller.js   --> Controller para busca de PDVs mais próximos usando Geojson
     node_modules/                   --> Diretório criado automaticamente com todas as dependências que o sistema importou
@@ -57,15 +57,15 @@ Se o projeto for iniciado com sucesso, ele estará roteando a API para a porta 7
                 pdv.js              --> Contém os paths para criação, busca por id e busca por localização
     test/                           --> Diretório com os testes automatizados
         tests.js                    --> Arquivo com configurações iniciais e agrupamento das funções de testes
-        pdv/                        --> Diretório com os testes do modulo de pdv
+        pdv/                        --> Diretório com os testes do módulo de pdv
             crud-controller.js
             geojson.js
 
 Essa arquitetura consiste de 3 partes principais:
 
 * Os arquivos app.js, server.js e modules.js que fazem a configuração inicial da API
-* O diretório routes que cria os endpoints e conectam com seus respectivos modulos
-* O diretório modules, onde se encontram todo processamento dos modulos que alimentarão a API
+* O diretório routes que cria os endpoints e conectam com seus respectivos módulos
+* O diretório modules, onde se encontram todo processamento dos módulos que alimentarão a API
 
 
 ## Funcionamento da API
