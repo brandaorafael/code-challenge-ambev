@@ -4,7 +4,8 @@
   "description": "Backend solution for https://github.com/ZXVentures/code-challenge/blob/master/backend.md",
   "main": "app.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha --exit"
+    "test": "NODE_ENV=test mocha --exit",
+    "start": "node app.js"
   },
   "author": "Rafael Augusto Brandão (brandaorafael)",
   "dependencies": {
