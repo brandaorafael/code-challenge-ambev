@@ -3,7 +3,7 @@
 
 ## Sobre o projeto
 
-O projeto para essa solução em backend foi feito usando o framework para Javascript, [NodeJS](https://nodejs.org/) (v8.10.0) e o banco de dados não relacional, [MongoDB](https://www.mongodb.com/), tanto pela simplicidade dos dados do projeto quanto pelo uso de [GeoJson](http://geojson.org/). Para manejo do banco foi usado o modelador de objetos, [Mongoose](https://mongoosejs.com/). Ele é conectado ao banco e configurado inicialmente no arquivo mongoose-init.js e seus Schemas foram definidos no diretório models do projeto. Para simplificar os testes no projeto, ele já está conectado à 2 bancos de dados (dev e tests) usando o serviço do [mLab](https://mlab.com/). Para implementação de testes automatizados, foi usado os frameworks de testes [Mocha](https://mochajs.org/) e [Chai](https://www.chaijs.com/). Eles são usados para testar os módulos em todos os seus possíveis cenários e comparar as respostas obtidas com as esperadas. Para não interferir no banco usado para testes em desenvolvimento, foi criado um banco de dados exclusivo para uso em testes, que é esvaziado ao final do teste de cada módulo.
+O projeto para essa solução em backend foi feito usando o framework para Javascript, [NodeJS](https://nodejs.org/) (v8.10.0), e o banco de dados não relacional, [MongoDB](https://www.mongodb.com/), tanto pela simplicidade dos dados do projeto quanto pelo uso de [GeoJson](http://geojson.org/). Para manejo do banco foram usado o modelador de objetos, [Mongoose](https://mongoosejs.com/). Ele é conectado ao banco e configurado inicialmente no arquivo mongoose-init.js, e seus Schemas foram definidos no diretório models do projeto. Para simplificar os testes no projeto, ele já está conectado a 2 bancos de dados (dev e tests) usando o serviço do [mLab](https://mlab.com/). Para implementação de testes automatizados, foi usado os frameworks de testes [Mocha](https://mochajs.org/) e [Chai](https://www.chaijs.com/). Eles são usados para testar os módulos em todos os seus possíveis cenários e comparar as respostas obtidas com as esperadas. Para não interferir no banco usado para testes em desenvolvimento, foi criado um banco de dados exclusivo para uso em testes, que é esvaziado ao final do teste de cada módulo.
 
 
 ## Pré requisitos
@@ -18,7 +18,7 @@ Clone, download ou de fork no projeto. Feito isso, entre no diretório do projet
 
 ## Deploy
 
-O deploy foi feito pela ferramenta [Heroku](https://www.heroku.com/). Eu apenas criei um app novo na plataforma e linkei ele à branch master deste projeto. Agora toda ver que algo subir na branch master, o Heroku fara deploy automaticamente. A única coisa que tive de colocar no package.json para isso foi que o script de start é pelo arquivo app.js (e não server.js que é seu default). https://code-challenge-ambev.herokuapp.com/v1/pdv/1
+O deploy foi feito pela ferramenta [Heroku](https://www.heroku.com/). Foi criado um app novo na plataforma e 'linkado' ele à branch master deste projeto. Agora toda vez que algo subir na branch master, o Heroku fará deploy automaticamente. A única coisa que teve de ser modificada para esse deploy foi no package.json, onde foi configurado que o script de start é pelo arquivo app.js (e não server.js que é seu default). https://code-challenge-ambev.herokuapp.com/v1/pdv/1
 
     https://code-challenge-ambev.herokuapp.com
 
@@ -27,7 +27,7 @@ O deploy foi feito pela ferramenta [Heroku](https://www.heroku.com/). Eu apenas 
 
     node app.js
 
-Se o projeto for iniciado com sucesso, ele estará roteando a API para a porta 7000 do seu computador e o terminal ira imprimir a mensagem  ```Server is on, listening on: 7000``` .
+Se o projeto for iniciado com sucesso, ele estará roteando a API para a porta 7000 do seu computador e o terminal irá imprimir a mensagem  ```Server is on, listening on: 7000``` .
 
 
 ## Arquitetura do projeto
@@ -76,7 +76,15 @@ O projeto possui 3 endpoint:
 * GET /v1/pdv/:id
 * GET /v1/pdv?lat=[lat]&long=[long]
 
-Para facilitar os testes, foi criado uma Collection e um Environment para o Postman. 
+Esses 3 endpoints podem retornar os seguintes status no header do response:
+
+* 200: Sucesso
+* 404: Item não encontrado
+* 409: Erro ao inserir item com chave já existente no banco
+* 422: Algum argumento está faltando no request
+* 501: Erro interno no servidor
+
+Para facilitar os testes, foi criado uma Collection e um Environment para o Postman.
 
 
 ## Testando a API
