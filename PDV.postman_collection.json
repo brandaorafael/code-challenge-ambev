@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "23fcf540-7d1a-49cf-a88c-d0143607384c",
+		"name": "PDV",
+		"description": "Collection para testes da API de solução do problema https://github.com/ZXVentures/code-challenge/blob/master/backend.md",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "POST PDV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"51\",\n\t\"tradingName\": \"Adega do Joao\",\n\t\"ownerName\": \"Pele Maradona\",\n\t\"document\": \"960361.506-44\",\n\t\"coverageArea\": {\n\t\t\"type\": \"MultiPolygon\",\n\t\t\"coordinates\": [\n\t\t\t[\n\t\t\t\t[\n\t\t\t\t\t[\n\t\t\t\t\t\t-44.04912,\n\t\t\t\t\t\t-19.87743\n\t\t\t\t\t],\n\t\t\t\t\t[\n\t\t\t\t\t\t-44.0493,\n\t\t\t\t\t\t-19.89438\n                \t],\n                \t[\n                \t\t-44.04758,\n                \t\t-19.90212\n                \t],\n                \t[\n                \t\t-44.04346,\n                \t\t-19.90922\n                \t],\n                \t[\n                \t\t-44.03385,\n                \t\t-19.91923\n                \t],\n                \t[\n                \t\t-44.01891,\n                \t\t-19.92165\n                \t],\n                \t[\n                \t\t-44.01647,\n                \t\t-19.92306\n                \t],\n                \t[\n                \t\t-44.01436,\n                \t\t-19.92319\n                \t],\n                \t[\n                \t\t-44.01175,\n                \t\t-19.92427\n                \t],\n            \t\t[\n                \t\t-44.00724,\n                \t\t-19.92585\n            \t\t],\n            \t\t[\n                \t\t-43.99909,\n                \t\t-19.9185\n            \t\t],\n            \t\t[\n                \t\t-43.99432,\n                \t\t-19.91403\n            \t\t],\n            \t\t[\n                \t\t-43.99557,\n                \t\t-19.90842\n            \t\t],\n            \t\t[\n                \t\t-43.99582,\n                \t\t-19.90285\n            \t\t],\n            \t\t[\n                \t\t-43.99436,\n                \t\t-19.89002\n            \t\t],\n            \t\t[\n                \t\t-43.99316,\n                \t\t-19.8792\n            \t\t],\n            \t\t[\n                \t\t-43.99436,\n                \t\t-19.87371\n            \t\t],\n            \t\t[\n                \t\t-43.99951,\n                \t\t-19.86532\n            \t\t],\n            \t\t[\n                \t\t-44.01917,\n                \t\t-19.85135\n            \t\t],\n            \t\t[\n                \t\t-44.02801,\n                \t\t-19.8545\n            \t\t],\n            \t\t[\n                \t\t-44.03745,\n                \t\t-19.85668\n            \t\t],\n            \t\t[\n                \t\t-44.04397,\n                \t\t-19.8608\n            \t\t],\n            \t\t[\n                \t\t-44.04912,\n                \t\t-19.87743\n            \t\t]\n        \t\t]\n\t\t\t]\n\t\t]\n\t},\n\t\"address\": {\n\t\t\"type\": \"Point\",\n\t\t\"coordinates\": [\n            -44.012478,\n            -19.887215\n        ]\n    }\n}"
+						},
+						"url": {
+							"raw": "{{server}}/v1/pdv",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"pdv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PDV",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/v1/pdv/51",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"pdv",
+								"51"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GEOJSON",
+			"item": [
+				{
+					"name": "Find PDV",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/v1/pdv/nearest?lat=-44.018&long=-19.887",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"pdv",
+								"nearest"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "-44.018"
+								},
+								{
+									"key": "long",
+									"value": "-19.887"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
