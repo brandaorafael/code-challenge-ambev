@@ -15,6 +15,13 @@ Para rodar esse projeto, é necessário ter o Node.js e o seu gestor de pacotes 
 Clone, download ou de fork no projeto. Feito isso, entre no diretório do projeto e execute `npm install` para instalar todas as dependências.
 
 
+## Deploy
+
+O deploy foi feito pela ferramenta Heroku. Eu apenas criei um app novo na plataforma e linkei ele à branch master deste projeto. Agora toda ver que algo subir na branch master, o Heroku fara deploy automaticamente. A única coisa que tive de colocar no package.json para isso foi que o script de start é pelo arquivo app.js (e não server.js que é seu default).
+
+    https://code-challenge-ambev.herokuapp.com
+
+
 ## Rodando o Projeto
 
     node app.js
